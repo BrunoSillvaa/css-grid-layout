@@ -3,28 +3,28 @@ body {
     margin: 20px;
 }
 
-.foto {
-    max-width: 100%;
-    border-radius: 5px;
-    grid-column: 1 / -1;
-}
-
 .titulo {
     font-size: 50px;
     margin: 0;
+    grid-column: 1/3;
     place-self: center;
-    grid-column: 1 / -1;
+}
+
+.foto {
+    max-width: 100%;
+    border-radius: 5px;
 }
 
 .preco {
     font-size: 30px;
-    place-self: center;
-    grid-column: 1 / -1;
+    margin: 0;
+    font-weight: bold;
 }
 
 .descricao {
-    font-size: 40px;
-    grid-column: 1 / -1;
+    font-size: 50px;
+    margin: 0;
+    text-align: justify;
 }
 
 .link {
@@ -34,11 +34,21 @@ body {
     font-size: 20px;
     padding: 10px 5px;
     border-radius: 5px;
-    grid-column: 1 / 3;
 }
+
+.link:hover {
+    filter: brightness(120%);
+}
+
+/* GRID */
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.desc {
+    display: grid;
+    place-items: center;
 }
